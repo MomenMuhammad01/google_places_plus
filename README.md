@@ -1,39 +1,32 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## intro
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Google places plus is a dart package connect you with google's places api to get places suggestions and get place latitude and longitude.
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+  - Get Places Suggestions
+  - Get Place Location (latidue and longitude)
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+1- Add package to your pubspec.yaml file like this : 
 
-```dart
-const like = 'sample';
+```
+  google_places_plus:
+    git:
+      url: https://github.com/MomenMuhammad01/google_places_plus.git
 ```
 
-## Additional information
+2- Get Places Suggestions
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```
+GooglePlacesPlus.getSuggestions(searchQuery: "Alexandria", googleMapsKey: "YOUR_MAPS_KEY");
+```
+
+2- Get Places Latitude and Longitude
+
+```
+GooglePlacesPlus.getLatitudeAndLongitude(placeId: placeId, googleMapsKey: "YOUR_MAPS_KEY");
+```
