@@ -37,7 +37,7 @@ class GooglePlacesPlus {
     required String googleMapsKey,
   }) async {
     final response = await HttpClient.get(
-      ApiConstants.placeAutoComplete,
+      ApiConstants.placeDetails,
       queryParameters: {
         'place_id': placeId,
         'radius': 500,
