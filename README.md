@@ -14,7 +14,7 @@ Google places plus is a dart package connect you with google's places api to get
 1- Add package to your pubspec.yaml file like this : 
 
 ```
-  cognitive_complexity_analyzer:
+  google_places_plus:
     git:
       url: https://github.com/MomenMuhammad01/cognitive_complexity_analyzer.git
 ```
