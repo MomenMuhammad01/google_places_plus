@@ -28,7 +28,7 @@ class GooglePlacesPlus {
     }
   }
 
-  static Future<PlaceDetails> getLatitudeAndLongitude({
+  static Future<PlaceLatLng> getLatitudeAndLongitude({
     required String placeId,
     required String googleMapsKey,
   }) async {
@@ -41,7 +41,7 @@ class GooglePlacesPlus {
       },
     );
     if (response['status'] == GoogleMapsCallStatus.ok.value) {
-      return PlaceDetails.fromJson(response['result']['geometry']['location']);
+      return PlaceLatLng.fromJson(response['result']['geometry']['location']);
     } else {
       throw Exception("Couldn't fetch search results");
     }

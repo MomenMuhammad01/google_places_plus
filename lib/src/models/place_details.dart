@@ -1,15 +1,15 @@
-class PlaceDetails {
+class PlaceLatLng {
   final double latitude;
   final double longitude;
 
-  factory PlaceDetails.fromJson(Map<String, dynamic> jsonData) {
-    return PlaceDetails(
+  factory PlaceLatLng.fromJson(Map<String, dynamic> jsonData) {
+    return PlaceLatLng(
       latitude: jsonData['lat'] ?? jsonData['latitude'],
       longitude: jsonData['lng'] ?? jsonData['longitude'],
     );
   }
 
-  PlaceDetails({
+  PlaceLatLng({
     required this.latitude,
     required this.longitude,
   });
