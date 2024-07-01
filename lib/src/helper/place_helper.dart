@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:google_places_plus/src/api/client.dart';
 import 'package:google_places_plus/src/models/place.dart';
 import 'package:google_places_plus/src/models/place_details.dart';
@@ -17,6 +18,9 @@ class GooglePlacesPlus {
         'key': googleMapsKey,
       },
     );
+    if (kDebugMode) {
+      print(response);
+    }
     if (response['status'] == GoogleMapsCallStatus.ok.value) {
       return List<Place>.from(
         ((response['predictions'] ?? []) as List).map(
@@ -40,6 +44,9 @@ class GooglePlacesPlus {
         'key': googleMapsKey,
       },
     );
+    if (kDebugMode) {
+      print(response);
+    }
     if (response['status'] == GoogleMapsCallStatus.ok.value) {
       return PlaceLatLng.fromJson(response['result']['geometry']['location']);
     } else {
