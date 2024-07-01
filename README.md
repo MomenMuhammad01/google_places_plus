@@ -28,5 +28,5 @@ GooglePlacesPlus.getSuggestions(searchQuery: "Alexandria", googleMapsKey: "YOUR_
 2- Get Places Latitude and Longitude
 
 ```
-GooglePlacesPlus.getSuggestions(placeId: placeId, googleMapsKey: "YOUR_MAPS_KEY");
+GooglePlacesPlus.getLatitudeAndLongitude(placeId: placeId, googleMapsKey: "YOUR_MAPS_KEY");
 ```
