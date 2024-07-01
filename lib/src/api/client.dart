@@ -10,7 +10,10 @@ class HttpClient {
   }) async {
     Uri uri = Uri.parse("${ApiConstants.baseUrl}$endpoint");
     if (queryParameters != null) {
-      uri = uri.replace(queryParameters: queryParameters);
+      Map<String, String> stringQueryParameters = queryParameters.map(
+        (key, value) => MapEntry(key, value.toString()),
+      );
+      uri = uri.replace(queryParameters: stringQueryParameters);
     }
     final response = await http.get(uri);
     if (response.statusCode == 200) {
